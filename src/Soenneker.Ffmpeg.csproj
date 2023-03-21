@@ -9,7 +9,7 @@
 
     <PropertyGroup>
         <Description>Providing the Ffmpeg binaries</Description>
-        <Version Condition="'$(BUILD_VERSION)' == ''">1.0.6</Version>
+        <Version Condition="'$(BUILD_VERSION)' == ''">1.0.7</Version>
         <Version Condition="'$(BUILD_VERSION)' != ''">$(BUILD_VERSION)</Version>
         <AssemblyName>Soenneker.Ffmpeg</AssemblyName>
         <PackageId>Soenneker.Ffmpeg</PackageId>
@@ -36,10 +36,7 @@
         <None Include="..\README.md" Pack="true" PackagePath="\" />
         <None Include="..\LICENSE" Pack="true" PackagePath="\" />
         <None Include="..\icon.png" Pack="true" PackagePath="\" />
-        <Content Include="Resources\ffmpeg.exe" Pack="true" PackagePath="tools\">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-            <PackageCopyToOutput>true</PackageCopyToOutput>
-        </Content>
+        <Content Include="Resources\ffmpeg.exe" Pack="true" PackageCopyToOutput="true" />
     </ItemGroup>
 
     <ItemGroup>
